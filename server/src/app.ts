@@ -15,7 +15,7 @@ const app = express();
 
 // ✅ Enable CORS for frontend
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://note-taker-delta-plum.vercel.app',
   credentials: true, // if using cookies/sessions
 }));
 
