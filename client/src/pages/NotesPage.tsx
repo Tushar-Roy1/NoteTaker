@@ -24,7 +24,7 @@ export default function NotesPage() {
 
   const fetchNotes = async () => {
     try {
-     const res = await axios.get('http://localhost:4000/notes', {
+     const res = await axios.get('https://notetaker-backend-fuho.onrender.com/notes', {
     headers: { Authorization: `Bearer ${token}` }
       });
       setNotes(res.data);
@@ -32,7 +32,7 @@ export default function NotesPage() {
       setError('Failed to fetch notes');
     }
   };
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://notetaker-backend-fuho.onrender.com';
 
 const handleCreate = async () => {
   if (!content) return;

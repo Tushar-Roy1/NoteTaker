@@ -20,7 +20,7 @@ export default function SignupPage() {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:4000/auth/signup", { email });
+      await axios.post("https://notetaker-backend-fuho.onrender.com/auth/signup", { email });
       navigate("/otp", { state: { email } });
     } catch (err: any) {
       setError(err.response?.data?.message || "Something went wrong");
@@ -39,7 +39,7 @@ export default function SignupPage() {
       }
 
       // Send ID token to backend
-      const res = await axios.post("http://localhost:4000/auth/google", {
+      const res = await axios.post("https://notetaker-backend-fuho.onrender.com/auth/google", {
         token: idToken,
       });
 

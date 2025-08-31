@@ -20,7 +20,7 @@ export default function OtpPage() {
 
     try {
       setLoading(true);
-         const res = await axios.post('http://localhost:4000/auth/verify', { email, otp });
+         const res = await axios.post('https://notetaker-backend-fuho.onrender.com/auth/verify', { email, otp });
       localStorage.setItem('token', res.data.token);
       navigate('/notes');
     } catch (err: any) {
